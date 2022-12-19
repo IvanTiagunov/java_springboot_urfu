@@ -42,7 +42,7 @@ public class BookShelfController {
 
     @PostMapping("/remove")
     public String removeBook(@RequestParam(value = "bookIdToRemove") Integer bookIdToRemove) {
-        //TODO задание 1
+        // TODO задание 1
         bookService.removeBookById(bookIdToRemove);
         return "redirect:/books/shelf";
     }
