@@ -21,7 +21,6 @@ public class BookRepository implements ProjectRepository<Book> {
 
     @Override
     public void store(Book book) {
-        //TODO задание 2
         if (!String.valueOf(book.getId()).isEmpty() && !book.getAuthor().isEmpty() && !book.getSize().toString().isEmpty()){
             book.setId(book.hashCode());
             logger.info("store new book: " + book);
@@ -44,7 +43,6 @@ public class BookRepository implements ProjectRepository<Book> {
 
     @Override
     public boolean removeItemByRegex(String query){
-        //TODO задание 3
         boolean flag = false;
         for (Book book : retreiveAll()) {
             if (book.getAuthor().equals(query) || book.getTitle().equals(query) ||
